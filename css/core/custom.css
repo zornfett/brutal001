@@ -1,35 +1,51 @@
 /* RBB edits
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
- */
+*/
+* {
+	font-family: 'VT323', monospace;
+}
 
+.choink {
+	animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		background-color: yellow;
+	}
+	100% {
+		background-color: blue;
+	}
+}
+
+/*
 .pulse {
 	-webkit-animation-name: pulse;
-    animation-name: pulse;
+	animation-name: pulse;
 
-    width: 100px;
+	width: 100px;
 	height: 100px;
 	outline: 2px dashed yellow;
 }
 
-/*.element {
-  animation: pulse 5s infinite;
-}*/
-
 @-webkit-keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
+	0% {
+		background-color: #001F3F;
+	}
+	100% {
+		background-color: #FF4136;
+	}
 }
 
 @keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
+	0% {
+		background-color: #001F3F;
+	}
+	100% {
+		background-color: #FF4136;
+	}
 }
+*/
+
+
