@@ -2,6 +2,7 @@
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
 */
+
 * {
 	font-family: 'VT323', monospace;
 }
@@ -19,33 +20,46 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 	}
 }
 
-/*
-.pulse {
-	-webkit-animation-name: pulse;
-	animation-name: pulse;
-
-	width: 100px;
-	height: 100px;
-	outline: 2px dashed yellow;
-}
-
-@-webkit-keyframes pulse {
+/* .. */
+@keyframes stretch {
 	0% {
-		background-color: #001F3F;
+		transform: scale(.3);
+		/*background-color: red;*/
+		border-radius: 100%
+	}
+	50% {
+		/*background-color: orange;*/
+		outline: 5px dotted red;
 	}
 	100% {
-		background-color: #FF4136;
+		transform: scale(5);
 	}
 }
 
-@keyframes pulse {
-	0% {
-		background-color: #001F3F;
-	}
-	100% {
-		background-color: #FF4136;
-	}
+.legubrious {
+	width: 2em;
+	height: 2em;
+	margin: 0 auto;
+	outline: 2px solid orange;
+
+	animation-name: stretch;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-direction: alternate; /* ?!? */
+	animation-iteration-count: infinite;
+	animation-fill-mode: none; /* ?!? */
+	animation-play-state: running; /* ?!? */
+	/*
+		You could also just list the attributes, e.g.:
+
+		animation:
+		stretch
+		1.5s
+		0s
+		alternate
+		infinite
+		none
+		running;
+	*/
 }
-*/
-
-
