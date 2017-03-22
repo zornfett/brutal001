@@ -1,78 +1,20 @@
 /* RBB edits
+
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
+
 */
 
 * {
 	font-family: 'VT323', monospace;
+	box-sizing: border-box; /* per Gridley */
 }
 
-body { /* .choink */
+body {
 	animation: pulse 5s infinite;
 }
 
-@keyframes pulse {
-	0% {
-		background-color: blue;
-	}
-	50% {
-		background-color: yellow;
-	}
-	100% {
-		background-color: blue;
-	}
-}
-
-/* .. */
-@keyframes stretch {
-	0% {
-		transform: scale(.3);
-		/*background-color: red;*/
-		border-radius: 100%
-	}
-	50% {
-		/*background-color: orange;*/
-		outline: 5px dotted red;
-	}
-	100% {
-		transform: scale(5);
-	}
-}
-
-.legubrious {
-	width: 2em;
-	height: 2em;
-	margin: 0 auto;
-	outline: 2px solid orange;
-
-	animation-name: stretch;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-delay: 0s;
-	animation-direction: alternate; /* ?!? */
-	animation-iteration-count: infinite;
-	animation-fill-mode: none; /* ?!? */
-	animation-play-state: running; /* ?!? */
-	/*
-		You could also just list the attributes, e.g.:
-
-		animation:
-		stretch
-		1.5s
-		0s
-		alternate
-		infinite
-		none
-		running;
-	*/
-}
-
 /* FROM GRIDLEY */
-
-* {
-	box-sizing: border-box;
-	}
-
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -81,6 +23,15 @@ body { /* .choink */
 
 	max-width: 940px;
 	margin: 0 auto;
+
+	animation-name: stretch;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
 }
 .wrapper > div {
 	border: 2px solid MediumSeaGreen;
@@ -113,3 +64,60 @@ body { /* .choink */
 	grid-column: 3;
 	grid-row: 4;
 }
+
+/* animashuns */
+
+@keyframes pulse {
+	0% {
+		background-color: blue;
+	}
+	50% {
+		background-color: yellow;
+	}
+	100% {
+		background-color: blue;
+	}
+}
+
+@keyframes stretch {
+	0% {
+		transform: scale(.3);
+		border-radius: 100%
+	}
+	50% {
+		outline: 5px dotted red;
+	}
+	100% {
+		transform: scale(1.5);
+	}
+}
+
+.legubrious {
+	width: 2em;
+	height: 2em;
+	margin: 0 auto;
+	outline: 2px solid orange;
+
+	animation-name: stretch;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-direction: alternate; /* ?!? */
+	animation-iteration-count: infinite;
+	animation-fill-mode: none; /* ?!? */
+	animation-play-state: running; /* ?!? */
+	/*
+		You could also just list the attributes, e.g.:
+
+		animation:
+		stretch
+		1.5s
+		0s
+		alternate
+		infinite
+		none
+		running;
+	*/
+}
+
+
