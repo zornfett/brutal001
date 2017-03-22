@@ -7,12 +7,15 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 	font-family: 'VT323', monospace;
 }
 
-.choink {
+body { /* .choink */
 	animation: pulse 5s infinite;
 }
 
 @keyframes pulse {
 	0% {
+		background-color: blue;
+	}
+	50% {
 		background-color: yellow;
 	}
 	100% {
@@ -62,4 +65,51 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 		none
 		running;
 	*/
+}
+
+/* FROM GRIDLEY */
+
+* {
+	box-sizing: border-box;
+	}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+
+	max-width: 940px;
+	margin: 0 auto;
+}
+.wrapper > div {
+	border: 2px solid MediumSeaGreen;
+	border-radius: 5px;
+	background-color: rgba(233,171,88,.25);
+	padding: 1em;
+	color: Brown;
+}
+.one {
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+.two { 
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+}
+.three {
+	grid-row: 2 / 5;
+	grid-column: 1;
+}
+.four {
+	grid-column: 3;
+	grid-row: 3;
+}
+.five {
+	grid-column: 2;
+	grid-row: 4;
+}
+.six {
+	grid-column: 3;
+	grid-row: 4;
 }
