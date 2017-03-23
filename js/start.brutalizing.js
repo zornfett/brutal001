@@ -22,7 +22,7 @@ $('.pride').prideify();
 /* BAFFLE */
 /* Animation speed value can be increased or decreased. Same with duration */
 let b = baffle('.baffle', { characters: 'ᕦ⁞ ✿ ᵒ̌ ᴥ ᵒ̌ ✿ ⁞ᕤ', speed: 150 }).reveal(2500); /* Runs animation only once, upon page load */
-let bl = baffle('.baffle-longer', { characters: '╰( ⁰ ਊ ⁰ )━☆ﾟ.*･｡ﾟ', speed: 150, duration: 3000 }).reveal(2500); /* Animation duration set to 3 seconds */
+let bl = baffle('.baffle-longer', { characters: '╰( ⁰ ਊ ⁰ )━☆ﾟ.*･｡ﾟ', speed: 150, duration: 3000 }).reveal(10000); /* Animation duration set to 3 seconds */
 let bf = baffle('.baffle-forever', {characters: 'ᕕ(˵•̀෴•́˵)ᕗ', speed: 150}).start(); /* Animation continues on an endless loop */
 
 });
