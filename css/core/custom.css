@@ -14,8 +14,32 @@ body {
 	animation: pulse 5s infinite;
 }
 
+.toppy {
+	outline: 5px dotted red;
+	margin: 1em;
+}
+
+.middly {
+	outline: 5px dotted blue;
+	margin: 1em;
+}
+
+.lowers {
+	outline: 5px dotted green;
+	margin: 1em;
+}
+
+button.oink {
+	display: block;
+	margin: 0 auto;
+}
+
+.kevin-spacey { /* why non-breakers? */
+	2px dashed orange;
+}
+
 /* FROM GRIDLEY */
-.wrapper {
+.grid-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 10px;
@@ -33,7 +57,7 @@ body {
 	animation-fill-mode: none;
 	animation-play-state: running;
 }
-.wrapper > div {
+.grid-wrapper > div {
 	border: 2px solid MediumSeaGreen;
 	border-radius: 5px;
 	background-color: rgba(233,171,88,.25);
@@ -51,6 +75,8 @@ body {
 .three {
 	grid-row: 2 / 5;
 	grid-column: 1;
+	background: url('../../assets/images/7723989224_5301129410_b.jpg') no-repeat -79px -144px;
+	overflow: hidden;
 }
 .four {
 	grid-column: 3;
@@ -85,10 +111,22 @@ body {
 		border-radius: 100%
 	}
 	50% {
-		outline: 5px dotted red;
+		/*outline: 5px dotted red;*/
 	}
 	100% {
 		transform: scale(1.5);
+	}
+}
+
+@keyframes corn {
+	0% {
+		border-bottom-right-radius: .15em;
+	}
+	50% {
+		border-bottom-right-radius: 1em;
+	}
+	100% {
+		border-bottom-right-radius: .15em;
 	}
 }
 
@@ -121,3 +159,12 @@ body {
 }
 
 
+/* mobile &amp; tab.portrait */
+@media (max-width: 767px) { 
+	
+}
+
+/* tab.lando &amp; desktop */
+@media (min-width: 768px) {
+
+}
