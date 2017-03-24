@@ -1,8 +1,6 @@
 /* RBB edits
-
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
-
 */
 
 * {
@@ -11,34 +9,135 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 }
 
 body {
-	animation: pulse 5s infinite;
+	animation: pulse 20s infinite;
+}
+	.toppy .grid-wrapper > div {
+
+		outline: 2px dotted red;
+	}
+	.middly .grid-wrapper > div {
+
+		outline: 2px dotted green;
+	}
+	.lowers .grid-wrapper > div {
+
+		outline: 2px dotted blue;
+	}
+
+/* NOO GRIDLEY 
+filter: blur(.25em);
+background: url('../../assets/images/7723989224_5301129410_b.jpg') no-repeat -79px -144px;
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
+*/
+
+/* mobile &amp; tab.portrait */
+@media (max-width: 767px) { 
+	.toppy .grid-wrapper {
+		display: grid;
+		grid-template-columns: 3em auto 3em; /* repeat(3, 1fr) */
+		grid-template-rows: 25%; /* 25% 8em auto */
+		grid-gap: .5em;
+
+	}
+		.toppy .grid-wrapper .four {
+			visibility: hidden;
+		}
+	.middly .grid-wrapper { /* GAAAHHH fix this */
+		display: grid;
+		grid-template-columns: 2em;
+		grid-template-rows: 25% 5em;
+		grid-gap: 2em;
+
+	}
+	.lowers .grid-wrapper {
+		display: grid;
+		grid-template-columns: 2em auto 2em;
+		grid-template-rows: auto;
+	}
+		.lowers .grid-wrapper .one,
+		.lowers .grid-wrapper .three {
+			visibility: hidden;
+	}
+}
+/* tab.lando &amp; desktop */
+@media (min-width: 768px) {
+	.toppy .grid-wrapper {
+		display: grid;
+		grid-template-columns: 2em 5em auto 5em 2em; /* repeat(3, 1fr) */
+		grid-template-rows: 15% 6.5em auto;
+		grid-gap: 1em;
+
+	}
+	.middly .grid-wrapper {
+		display: grid;
+
+	}
+	.lowers .grid-wrapper {
+		display: grid;
+		grid-template-columns: 5em auto 5em;
+		grid-template-rows: auto;
+	}
 }
 
-.toppy {
-	outline: 5px dotted red;
-	margin: 1em;
+.one {
+
+}
+.two { 
+	
+}
+.three {
+	
+}
+.four {
+	
+}
+.five {
+	
+}
+.six {
+	
 }
 
-.middly {
-	outline: 5px dotted blue;
-	margin: 1em;
+/* animashuns */
+@keyframes pulse {
+	0% {
+		background-color: blue;
+	}
+	50% {
+		background-color: yellow;
+	}
+	100% {
+		background-color: blue;
+	}
 }
 
-.lowers {
-	outline: 5px dotted green;
-	margin: 1em;
+@keyframes stretch {
+	0% {
+		transform: scale(.3);
+		border-radius: 100%
+	}
+	50% {
+		/*outline: 5px dotted red;*/
+	}
+	100% {
+		transform: scale(1.5);
+	}
 }
 
-button.oink {
-	display: block;
-	margin: 0 auto;
+@keyframes corn {
+	0% {
+		border-bottom-right-radius: .15em;
+	}
+	50% {
+		border-bottom-right-radius: 1em;
+	}
+	100% {
+		border-bottom-right-radius: .15em;
+	}
 }
 
-.kevin-spacey { /* why non-breakers? */
-	2px dashed orange;
-}
-
-/* FROM GRIDLEY */
+/* FROM PREV.GRIDLEY
 .grid-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -91,46 +190,9 @@ button.oink {
 	grid-column: 3;
 	grid-row: 4;
 }
+ */
 
-/* animashuns */
-
-@keyframes pulse {
-	0% {
-		background-color: blue;
-	}
-	50% {
-		background-color: yellow;
-	}
-	100% {
-		background-color: blue;
-	}
-}
-
-@keyframes stretch {
-	0% {
-		transform: scale(.3);
-		border-radius: 100%
-	}
-	50% {
-		/*outline: 5px dotted red;*/
-	}
-	100% {
-		transform: scale(1.5);
-	}
-}
-
-@keyframes corn {
-	0% {
-		border-bottom-right-radius: .15em;
-	}
-	50% {
-		border-bottom-right-radius: 1em;
-	}
-	100% {
-		border-bottom-right-radius: .15em;
-	}
-}
-
+/*
 .legubrious {
 	width: 2em;
 	height: 2em;
@@ -141,11 +203,11 @@ button.oink {
 	animation-duration: 1.5s;
 	animation-timing-function: ease-out;
 	animation-delay: 0s;
-	animation-direction: alternate; /* ?!? */
+	animation-direction: alternate;
 	animation-iteration-count: infinite;
-	animation-fill-mode: none; /* ?!? */
-	animation-play-state: running; /* ?!? */
-	/*
+	animation-fill-mode: none;
+	animation-play-state: running;
+
 		You could also just list the attributes, e.g.:
 
 		animation:
@@ -156,16 +218,14 @@ button.oink {
 		infinite
 		none
 		running;
-	*/
 }
 
-
-/* mobile &amp; tab.portrait */
-@media (max-width: 767px) { 
-	
+button.oink {
+	display: block;
+	margin: 0 auto;
 }
 
-/* tab.lando &amp; desktop */
-@media (min-width: 768px) {
-
+.kevin-spacey {
+	2px dashed orange;
 }
+*/
