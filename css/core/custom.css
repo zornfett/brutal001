@@ -12,16 +12,16 @@ body {
 	animation: pulse 20s infinite;
 }
 	.toppy .grid-wrapper > div {
+		outline: 5px dotted red;
 
-		outline: 2px dotted red;
 	}
 	.middly .grid-wrapper > div {
+		outline: 5px dashed green;
 
-		outline: 2px dotted green;
 	}
-	.lowers .grid-wrapper > div {
+	footer .grid-wrapper > div {
+		outline: 5px dotted blue;
 
-		outline: 2px dotted blue;
 	}
 
 /* NOO GRIDLEY 
@@ -43,14 +43,11 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 		.toppy .grid-wrapper .four {
 			visibility: hidden;
 		}
-	.middly .grid-wrapper { /* GAAAHHH fix this */
+	.middly .grid-wrapper {
 		display: grid;
-		grid-template-columns: 2em;
-		grid-template-rows: 25% 5em;
-		grid-gap: 2em;
 
 	}
-	.lowers .grid-wrapper {
+	footer .grid-wrapper {
 		display: grid;
 		grid-template-columns: 2em auto 2em;
 		grid-template-rows: auto;
@@ -71,9 +68,12 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 	}
 	.middly .grid-wrapper {
 		display: grid;
+		grid-template-columns: auto 10em 10em auto;
+		grid-template-rows: 25% 5em;/* this don't work: repeat */
+		grid-gap: 2em;
 
 	}
-	.lowers .grid-wrapper {
+	footer .grid-wrapper {
 		display: grid;
 		grid-template-columns: 5em auto 5em;
 		grid-template-rows: auto;
