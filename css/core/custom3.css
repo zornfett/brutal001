@@ -15,12 +15,12 @@ body {
 	.toppy .grid-wrapper,
 	.middly .grid-wrapper,
 	.altness .grid-wrapper,
-	footer .grid-wrapper
-	/*.shorthand > div
+	footer .grid-wrapper,
+	/*.shorthand > div*/
 	.shorthand .toppy,
 	.shorthand .middly,
 	.shorthand .altness,
-	.shorthand .footie*/ {
+	.shorthand .footie {
 		display: grid;
 	}
 	.toppy .grid-wrapper {
@@ -57,9 +57,9 @@ body {
 	}
 	/* SHORTHAND */
 	.shorthand {
-display: grid;
-/*	}
-	.shorthand > div {*/
+
+	}
+	.shorthand > div {
 		grid-template-columns: 20% 20% 20% 1fr; /* markup has to follow this quantity pattern too , 3em 3em 2em 1fr */
 		grid-template-rows: auto;
 		grid-template-areas: 
@@ -73,24 +73,24 @@ display: grid;
 
 		outline: 2px dotted white;
 	}
-	.shorthand > shortHead {/*.toppy*/
+	.shorthand .toppy {
 		grid-area: shortHead;
 
 		background-color: #9B59B6;
-
+		
 
 	}
-	.shorthand > mid {/*.middly*/
+	.shorthand .middly {
 		grid-area: shortMid;
 
 		background-color: #F22613;
 	}
-	.shorthand > alt {/*.altness*/
+	.shorthand .altness {
 		grid-area: shortAlt;
 
 		background-color: #16A085;
 	}
-	.shorthand > shortFoot {/*.footie*/
+	.shorthand .footie {
 		grid-area: shortFoot;
 
 		background-color: #6C7A89;
