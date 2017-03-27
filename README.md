@@ -1,5 +1,3 @@
-full scopiness of Brutalist FE framework
-
 previously http://zornfett.com/noo-brutal/indexPREV.html
 
 more.explosion http://zornfett.com/noo-brutal/index3.html
