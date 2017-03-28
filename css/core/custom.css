@@ -1,4 +1,4 @@
-/* RBB edits
+ RBB edits
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
 */
@@ -11,90 +11,50 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 body {
 	animation: pulse 20s infinite;
 }
-	/* writing this here a good 'directory' of gen.GRID areas? */
-	.toppy .grid-wrapper,
-	.middly .grid-wrapper,
-	.altness .grid-wrapper,
-	footer .grid-wrapper
-	/*.shorthand > div
-	.shorthand .toppy,
-	.shorthand .middly,
-	.shorthand .altness,
-	.shorthand .footie*/ {
-		display: grid;
-	}
-	.toppy .grid-wrapper {
-		grid-area: header;
 
-	}
-	.toppy .grid-wrapper > div {
-		outline: 5px dotted red;
-
-	}
-	.middly .grid-wrapper {
-		grid-area: main;
-
-	}
-	.middly .grid-wrapper > div {
-		outline: 5px dashed green;
-
-	}
-	.altness .grid-wrapper {
-		grid-area: sidebar;
-
-	}
-	.altness .grid-wrapper > div {
-		outline: 5px solid orange;
-
-	}
-	footer .grid-wrapper {
-		grid-area: footer;
-
-	}
-	footer .grid-wrapper > div {
-		outline: 5px dotted blue;
-
-	}
 	/* SHORTHAND */
+	/*.shorthand > div,*/
 	.shorthand {
-display: grid;
-/*	}
-	.shorthand > div {*/
+		display: grid;
 		grid-template-columns: 20% 20% 20% 1fr; /* markup has to follow this quantity pattern too , 3em 3em 2em 1fr */
 		grid-template-rows: auto;
 		grid-template-areas: 
-			"shortHead shortHead shortHead shortFoot"
-			"shortMid shortMid . shortMid"
-			"shortMid . . shortAlt"
-			"shortFoot . shortFoot shortHead"
-		;
+			"header header header header"
+			"main main . nav"
+			"footer footer footer footer";
+/*			"header header header header"
+			"main main . nav"
+			"footer footer footer footer";*/
+/*			"header header header footer"
+			"main main . main"
+			"main . . nav"
+			"footer . footer header";*/
 	}
-	.shorthand div {
+		/*.shorthand > div,*/
+		.shorthand div {
 
-		outline: 2px dotted white;
-	}
-	.shorthand > shortHead {/*.toppy*/
-		grid-area: shortHead;
+			outline: 2px dotted white;
+		}
+		.shorthand .don-hedley {/*.toppy*/
+			grid-area: header;
 
-		background-color: #9B59B6;
+			background-color: #9B59B6; /* purp */
+		}
+		.shorthand .navel {/*.middly*/
+			grid-area: nav;
 
+			background-color: #F22613; /* red */
+		}
+		.shorthand .chow-mein {/*.altness*/
+			grid-area: main;
 
-	}
-	.shorthand > mid {/*.middly*/
-		grid-area: shortMid;
+			background-color: #16A085; /* green */
+		}
+		.shorthand .footie {/*.footie*/
+			grid-area: footer;
 
-		background-color: #F22613;
-	}
-	.shorthand > alt {/*.altness*/
-		grid-area: shortAlt;
-
-		background-color: #16A085;
-	}
-	.shorthand > shortFoot {/*.footie*/
-		grid-area: shortFoot;
-
-		background-color: #6C7A89;
-	}
+			background-color: #6C7A89; /* grey */
+		}
 
 /* NOO GRIDLEY 
 filter: blur(.25em);
@@ -156,7 +116,6 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 }
 
-
 /* animashuns */
 @keyframes pulse {
 	0% {
@@ -197,6 +156,25 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 /* 
 
+"header header header footer"
+"main main . main"
+"main . . nav";
+"footer . footer header";
+
+"header header header header"
+"main main . sidebar"
+"footer footer footer footer";
+
+"shortHead shortHead shortHead shortFoot"
+"shortMid shortMid . shortMid"
+"shortMid . . shortAlt"
+"shortFoot . shortFoot shortHead";
+
+"shortHead shortHead shortHead shortFoot"
+"shortMid shortMid . shortMid"
+"shortMid . . shortAlt"
+"shortFoot . shortFoot shortHead";
+
 .one {
 
 }
@@ -216,94 +194,3 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 	
 }
 
-FROM PREV.GRIDLEY
-.grid-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
-	grid-auto-rows: minmax(100px, auto);
-
-	max-width: 940px;
-	margin: 0 auto;
-
-	animation-name: stretch;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-delay: 0s;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-	animation-fill-mode: none;
-	animation-play-state: running;
-}
-.grid-wrapper > div {
-	border: 2px solid MediumSeaGreen;
-	border-radius: 5px;
-	background-color: rgba(233,171,88,.25);
-	padding: 1em;
-	color: Brown;
-}
-.one {
-	grid-column: 1 / 3;
-	grid-row: 1;
-}
-.two { 
-	grid-column: 2 / 4;
-	grid-row: 1 / 3;
-	filter: blur(.25em);
-}
-.three {
-	grid-row: 2 / 5;
-	grid-column: 1;
-	background: url('../../assets/images/7723989224_5301129410_b.jpg') no-repeat -79px -144px;
-	overflow: hidden;
-}
-.four {
-	grid-column: 3;
-	grid-row: 3;
-}
-.five {
-	grid-column: 2;
-	grid-row: 4;
-}
-.six {
-	grid-column: 3;
-	grid-row: 4;
-}
- */
-
-/*
-.legubrious {
-	width: 2em;
-	height: 2em;
-	margin: 0 auto;
-	outline: 2px solid orange;
-
-	animation-name: stretch;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-delay: 0s;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-	animation-fill-mode: none;
-	animation-play-state: running;
-
-		You could also just list the attributes, e.g.:
-
-		animation:
-		stretch
-		1.5s
-		0s
-		alternate
-		infinite
-		none
-		running;
-}
-
-button.oink {
-	display: block;
-	margin: 0 auto;
-}
-
-.kevin-spacey {
-	2px dashed orange;
-}
