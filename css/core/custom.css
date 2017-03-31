@@ -1,6 +1,12 @@
- RBB edits
+/* RBB edits
 https://css-tricks.com/almanac/properties/a/animation/
 https://webdesignerhut.com/5-animations-using-css-keyframes/
+
+newer:
+https://github.com/abookapart/css-grid-layout-code/blob/master/ch1-line-based.html
+https://github.com/abookapart/css-grid-layout-code/blob/master/ch1-line-based-span.html
+
+
 */
 
 * {
@@ -9,10 +15,81 @@ https://webdesignerhut.com/5-animations-using-css-keyframes/
 }
 
 body {
+	/*
 	animation: pulse 20s infinite;
+	*/
 }
 
-	/* SHORTHAND */
+/* aGRIDapart */
+.wrapper {
+	display: grid;
+	grid-template-columns: 100px 10px 100px 10px 100px;
+	grid-template-rows: auto 10px auto;
+
+}
+.wrapper > div {
+	/*outline: 2px dotted white;*/
+}
+
+.a {
+
+/*
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	grid-column: 1/2;
+	grid-row: 1/2;
+
+SHORTHAND BELOW:
+grid-row-start
+grid-column-start
+grid-row-end
+grid-column-end
+
+	grid-area: 1 / 1 / 4 / 2; */
+	grid-column: 1 / span 3;
+	grid-row: 1;
+
+	outline: 2px dotted orange;
+}
+.b {
+	grid-column: 5;
+	grid-row: 1 / span 3;
+
+	outline: 2px dotted red;
+}
+.c {
+	grid-column: 1;
+	grid-row: 3;
+
+	outline: 2px dotted blue;
+}
+.d {
+	grid-column: 3;
+	grid-row: 3;
+
+	outline: 2px dotted green;
+}
+/*
+'span' keyword indicates amt of spans traversing; single-value col or row values indicate the content only spans to the next line (default)
+
+
+.e {
+	grid-column: 3/4;
+	grid-row: 3/4;
+
+	outline: 2px dotted yellow;
+}
+.f {
+	grid-column: 5/6;
+	grid-row: 3/4;
+
+	outline: 2px dotted white;
+}*/
+
+/* OMG PREVS.SCHEIßE */
 	/*.shorthand > div,*/
 	.shorthand {
 		display: grid;

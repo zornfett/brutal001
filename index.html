@@ -3,84 +3,95 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>zorndotcommie, v.2</title>
-	<meta name="description" content="The Brutal Grid" />
-	<meta name="keywords" content="brutalism, grid, etc." />
-<!-- Open Graph data
-	<meta property="og:title" content="TKTKtitleTKTKT" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="TKTKTurlTKTK" />
-	<meta property="og:image" content="http://www.brutalistframework.com/assets/images/ZZZZZZ" />
-	<meta property="og:description" content="TKTKTK" /> 
-	<meta property="og:site_name" content="TKTKTK" />
--->
+	<title>zorndotcommie, v.5</title>
 
-	<!-- Icons -->
 	<link rel="shortcut icon" href="royce-crop.png" type="image/x-icon" />
-<!-- 	
-	<link rel="icon" href="assets/icons/bf15.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="assets/icons/ZZZZZ" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="assets/icons/bf57.png" />
--->
 
 	<!-- CSS  -->
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	<link href="css/core/core.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<!-- 	
-	<link href="css/theme.css" type="text/css" rel="stylesheet" media="screen,projection" />
--->
+
+<style type="text/css">
+
+* { font-family: 'VT323', monospace; }
+body { /* animation: pulse 20s infinite; */ }
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 100px 10px 100px 10px 100px; /* 6 */
+	grid-template-rows: auto 10px auto; /* 4, the autos react to the shape of the grid being laid-out by numeric cells */
+
+}
+.a {
+	grid-column: 1 / span 3;
+	grid-row: 1/4;
+
+	outline: 2px dotted orange;
+}
+.b {
+	grid-column: 4;
+	grid-row: 1/4;
+
+	outline: 2px dotted red;
+}
+.c {
+	grid-column: 1 / span 3;
+	grid-row: 4;
+
+	outline: 2px dotted blue;
+}
+.d {
+	grid-column: 4 / span 2; /* why does '3' blow this out - because '6' is the fucking edge of the grid */
+	grid-row: 4;
+
+	outline: 2px dotted green;
+}
+
+</style>
+
 </head>
 <body>
-
-	<!-- <div class="row"> -->
-		<div class="shorthand">
-			<div class="don-hedley">shortHead
-	<!-- div class="toppy"			<div class="one">one</div>
-				<div class="two">two</div>
-				<div class="three">three</div>
-				<div class="four">four</div> -->
-	<!-- 			<div class="five">five</div>
-				<div class="six">six</div> -->
-			</div>
-			<div class="navel">shortMid / "nav" .. note: these tags can't be improvised
-	<!-- class="middly" 			<div class="one">one</div>
-				<div class="two">two</div>
-				<div class="three">three</div>
-				<div class="four">four</div> -->
-			</div>
-			<div class="chow-mein">shortAlt / "main"
-				<!-- <div class="one">one</div> -->
-	<!-- class="altness" 			<div class="two">two</div>
-				<div class="three">three</div>
-				<div class="four">four</div>
-				<div class="five">five</div> -->
-	<!-- 			<div class="six">six</div> -->
-			</div>
-			<div class="footie">shortFoot
-				<!-- <div class="one">one</div> -->
-	<!-- class="footie" 			<div class="two">two</div>
-				<div class="three">three</div>
-				<div class="four">four</div>
-				<div class="five">five</div>
-				<div class="six">six</div> -->
-			</div>
-		</div>
-	<!-- </div> -->
+	<div class="wrapper">
+		<div class="box a">aaa</div>
+		<div class="box b">bbb</div>
+		<div class="box c">ccc</div>
+		<div class="box d">ddd</div>
+<!-- 		<div class="box e">eee</div>
+		<div class="box f">fff</div> -->
+	</div>
 
 <!--  Scripts-->
 <script src="js/jquery.js"></script>
-<script src="js/brutalist.js"></script>
+<!-- <script src="js/brutalist.js"></script>
 <script src="js/start.brutalizing.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/custom.js"></script> -->
 
 </body>
 </html>
 
 <!-- 
-			<div class="one">one</div>
-			<div class="two">two</div>
-			<div class="three">three</div>
-			<div class="four">four</div>
-			<div class="five">five</div>
-			<div class="six">six</div>
+	<div class="one">one</div>
+	<div class="two">two</div>
+	<div class="three">three</div>
+	<div class="four">four</div>
+	<div class="five">five</div>
+	<div class="six">six</div>
+
+.one {
+
+}
+.two { 
+	
+}
+.three {
+	
+}
+.four {
+	
+}
+.five {
+	
+}
+.six {
+	
+}
 -->
