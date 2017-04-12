@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>zorndotcommie, v.5</title>
+	<title>zorndotcommie, v.6</title>
 
 	<link rel="shortcut icon" href="royce-crop.png" type="image/x-icon" />
 
@@ -17,56 +17,63 @@ body { /* animation: pulse 20s infinite; */ }
 
 .wrapper {
 	display: grid;
-	grid-template-columns: 100px 10px 100px 10px 100px; /* 6 */
-	grid-template-rows: auto 10px auto; /* 4, the autos react to the shape of the grid being laid-out by numeric cells */
-
+	grid-template-columns: 283px / auto ;
+	/* 6 , 100px 10px 100px 10px 100px */
+	grid-template-rows: 158px / auto ;
+	/* auto 10px auto , 4, the autos react to the shape of the grid being laid-out by numeric cells */
 }
-.box {
+
+
+
+/*.box {
 	padding: 1em;
-	/*margin: .15em;*/
+	/*margin: .15em;
 	outline: 2px solid #000;
 }
 .a {
-	grid-column:1 / 5;
+/*	grid-column:1 / 5;
 	grid-row: 1 / 2;
-	
 	background-color: orange;
 }
 .b {
-	grid-column: 1/3;
+/*	grid-column: 1/3;
 	grid-row: 2/3;
-	/*grid-column: 4;*/
-	/*grid-row: 1/4;*/
-
 	background-color: red;
 }
 .c {
-	grid-column: 1 / span 5;
+/*	grid-column: 1 / span 5;
 	grid-row: 1 / 3;
-
+	z-index: -10;
 	background-color: blue;
-	z-index: -10; /* this works */
 }
 .d {
-	grid-column: 4 / span 2;
-	/* why does '3' blow this out - because '6' is the fucking edge of the grid */
 	grid-row: 4;
-
-	background-color: green;
+	grid-column: 4 / span 2;
 	z-index: -100;
+	/* why does '3' blow this out - because '6' is the fucking edge of the grid 
+	background-color: green;
 }
+.e {
+/*	grid-row: 4;
+	grid-column: 4 / span 2;
+	z-index: -100;*/
+	/* why does '3' blow this out - because '6' is the fucking edge of the grid 
+	background-color: purple;
+}*/
 
 </style>
 
 </head>
 <body>
 	<div class="wrapper">
+
+
+<!-- 
 		<div class="box a">aaa</div>
 		<div class="box b">bbb</div>
 		<div class="box c">ccc</div>
 		<div class="box d">ddd</div>
-
-<!-- 
+		<div class="box e">eee</div>
 
 		<div class="box e">eee</div>
 		<div class="box f">fff</div> 
