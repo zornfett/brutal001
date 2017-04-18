@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>zorndotcommie, v.6</title>
+	<title>zorndotcommie, v.65</title>
 
 	<link rel="shortcut icon" href="royce-crop.png" type="image/x-icon" />
 
@@ -17,49 +17,50 @@ body { /* animation: pulse 20s infinite; */ }
 
 .wrapper {
 	display: grid;
-	grid-template-columns: 283px / auto ;
-	/* 6 , 100px 10px 100px 10px 100px */
-	grid-template-rows: 158px / auto ;
-	/* auto 10px auto , 4, the autos react to the shape of the grid being laid-out by numeric cells */
+	grid-template-columns: 20%/20%/20%/20%/20% ;
+	grid-template-rows: 25%/25%/25%/25%;
+	grid-gap: .5em;
+	/*grid-border: 1px dotted black;*/
 }
 
+/* 5 col () / 4 rows */
 
-
-/*.box {
+.box {
 	padding: 1em;
-	/*margin: .15em;
-	outline: 2px solid #000;
+
+	/*outline: 2px dotted black;*/
 }
 .a {
-/*	grid-column:1 / 5;
-	grid-row: 1 / 2;
-	background-color: orange;
-}
-.b {
-/*	grid-column: 1/3;
-	grid-row: 2/3;
-	background-color: red;
-}
-.c {
-/*	grid-column: 1 / span 5;
-	grid-row: 1 / 3;
-	z-index: -10;
+	grid-column: 1/2;
+	grid-row: 2;
+
 	background-color: blue;
 }
+.b {
+	grid-column: 3/span 1;
+	grid-row: 1/span 3;
+
+	background-color: orange;
+}
+.c {
+	grid-column: 4/5;
+	grid-row: 2/3;
+
+	background-color: red;
+}
 .d {
+	grid-column: 4;
 	grid-row: 4;
-	grid-column: 4 / span 2;
-	z-index: -100;
-	/* why does '3' blow this out - because '6' is the fucking edge of the grid 
+
 	background-color: green;
 }
 .e {
-/*	grid-row: 4;
-	grid-column: 4 / span 2;
-	z-index: -100;*/
-	/* why does '3' blow this out - because '6' is the fucking edge of the grid 
+	grid-column: 5;
+	grid-row: 4;
+
 	background-color: purple;
-}*/
+}
+
 
 </style>
 
@@ -67,14 +68,28 @@ body { /* animation: pulse 20s infinite; */ }
 <body>
 	<div class="wrapper">
 
+		<div class="box a">
+	grid-column: 1/2;
+	grid-row: 2;
+		</div>
+		<div class="box b">
+	grid-column: 3/span 1;
+	grid-row: 1/span 3;		
+		</div>
+		<div class="box c">
+	grid-column: 4/5;
+	grid-row: 2/3;		
+		</div>
+		<div class="box d">
+	grid-column: 4;
+	grid-row: 4;	
+		</div>
+		<div class="box e">
+	grid-column: 5;
+	grid-row: 4;	
+		</div>
 
-<!-- 
-		<div class="box a">aaa</div>
-		<div class="box b">bbb</div>
-		<div class="box c">ccc</div>
-		<div class="box d">ddd</div>
-		<div class="box e">eee</div>
-
+<!-- 		
 		<div class="box e">eee</div>
 		<div class="box f">fff</div> 
 -->
@@ -82,40 +97,18 @@ body { /* animation: pulse 20s infinite; */ }
 
 <!--  Scripts-->
 <script src="js/jquery.js"></script>
-<!-- <script src="js/brutalist.js"></script>
+<!--  -->
+<script src="js/brutalist.js"></script>
 <script src="js/start.brutalizing.js"></script>
-<script src="js/custom.js"></script> -->
+<script src="js/custom.js"></script>
 
 </body>
 </html>
 
 <!-- 
-	<div class="one">one</div>
-	<div class="two">two</div>
-	<div class="three">three</div>
-	<div class="four">four</div>
-	<div class="five">five</div>
-	<div class="six">six</div>
-
-.one {
-
-}
-.two { 
-	
-}
-.three {
-	
-}
-.four {
-	
-}
-.five {
-	
-}
-.six {
-	
-}
 
 https://www.glassdoor.com/Interview/Thrive-Market-Front-End-Developer-Interview-Questions-EI_IE1036608.0,13_KO14,33.htm
+
+
 
 -->
