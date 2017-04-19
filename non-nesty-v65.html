@@ -16,15 +16,13 @@
 body { /* animation: pulse 20s infinite; */ }
 
 .wrapper {
-	/*width: 865px;*/
-	display: grid;
+	width: 865px;
 
+	display: grid;
 	grid-template-columns: 254px/611px;
 	grid-template-rows: 31px/20px/78px/752px/15px;
 
 	/*
-	grid-template: ;
-
 	grid-gap: .5em;
 	grid-border: 1px dotted black;
 	*/
@@ -32,40 +30,40 @@ body { /* animation: pulse 20s infinite; */ }
 }
 
 
-header {
+/*header {
 	grid-area: header;
-/*	grid-column: 1/3;
-	grid-row: 1/4;*/
+	grid-column: 1/3;
+	grid-row: 1/4;
 
 	background-color: red;
-}
+}*/
 .logo {
 	grid-column: 1/2;
 	grid-row: 1/4;
 
 	background-color: yellow;
 }
-nav {
+/*nav {
 	grid-area: nav;
-/*	grid-column: 2/3;
-	grid-row: 1/4;*/
+	grid-column: 2/3;
+	grid-row: 1/4;
 
 	background-color: blue;
-}
+}*/
 .contact {
 	grid-column: 2/3;
-	grid-row: 1/1;
+	grid-row: 1;
 }
 .main-nav {
 	grid-column: 2/3;
-	grid-row: 2/2;
+	grid-row: 2;
 }
 .sub-nav {
 	grid-column: 2/3;
-	grid-row: 3/3;
+	grid-row: 3;
 }
 
-#content {
+/*#content {
 	grid-column: 4/5;
 	grid-row: 2/3;	
 
@@ -73,11 +71,11 @@ nav {
 }
 aside {
 	grid-area: aside;
-/*	grid-column: 1/2;
-	grid-row: 2/3;*/
+	grid-column: 1/2;
+	grid-row: 2/3;
 
 	background-color: orange;
-}
+}*/
 
 /*.gallery {
 	grid-column: ;
@@ -110,11 +108,11 @@ http://www.aerindustries.com/ebay-supplement/img1/
 -->
 
 <div class="wrapper">
-	<header>
+	<!-- <header></header> -->
 		<div class="logo">
 			<img src="http://www.aerindustries.com/ebay-supplement/img1/logo-main.png" alt="AER Industries" />
 		</div>
-		<nav>
+		<!-- <nav></nav> -->
 			<div class="contact">
 				contact
 			</div>
@@ -124,9 +122,9 @@ http://www.aerindustries.com/ebay-supplement/img1/
 			<div class="sub-nav">
 				sub-nav
 			</div>
-		</nav>
-	</header>
-	<section id="content">
+		
+	
+	<!-- <section id="content"></section> -->
 		<aside>
 			ASIDE
 		</aside>
@@ -136,7 +134,7 @@ http://www.aerindustries.com/ebay-supplement/img1/
 		<section class="tabs">
 			tabs
 		</section>
-	</section>
+	
 	<footer>
 		FOOTER
 	</footer>
