@@ -22,9 +22,10 @@ body { /* animation: pulse 20s infinite; */ }
 	/*width: 865px;*/
 	display: grid;
 
-	grid-template-columns: 254px/auto; /*611px*/
+	grid-template-columns: 254px/611px; /*611px*/
 	grid-template-rows: 31px/20px/78px/752px/15px;
 	/* 120px/752px/15px; */
+	grid-auto-flow: row;
 
 	margin: 0 auto;
 }
@@ -32,19 +33,14 @@ body { /* animation: pulse 20s infinite; */ }
 
 header {
 	grid-area: header;
-	grid-column: 1/3;
-	grid-row: 1/4;
+/*	grid-column: 1/3;
+	grid-row: 1/4;*/
 
 	background-color: red;
 }
 .logo {
 /*	grid-column: 1/2;
 	grid-row: 1/4;*/
-
-/*	grid-column-start 1;
-	grid-column-end 2;
-	grid-row-start 1;
-	grid-row-end 4;*/
 
 	background-color: yellow;
 }
@@ -59,38 +55,21 @@ nav {
 /*	grid-column: 2/3;
 	grid-row: 1/1;*/
 
-/*	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 1;	*/
 }
 .main-nav {
 /*	grid-column: 2/3;
 	grid-row: 2/2;*/
 
-/*	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 2;	*/
 }
 .sub-nav {
 /*	grid-column: 2/3;
 	grid-row: 3/3;*/
 
-/*	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 3;
-	grid-row-end: 3;*/	
 }
 
 #content {
 /*	grid-column: 4/5;
 	grid-row: 2/3;	*/
-
-/*	grid-column-start: 4;
-	grid-column-end: 5;
-	grid-row-start: 2;
-	grid-row-end: 3;	*/
 
 	background-color: green;
 	color: yellow;
@@ -99,11 +78,6 @@ aside {
 	grid-area: aside;
 /*	grid-column: 1/2;
 	grid-row: 2/3;*/
-
-/*	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;*/	
 
 	background-color: orange;
 	color: blue;
@@ -124,11 +98,6 @@ footer {
 /*	grid-column: 1/3;
 	grid-row: 5/6;*/
 
-/*	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 5;
-	grid-row-end: 6;	*/
-
 	background-color: purple;
 	color: yellow;
 }
@@ -138,13 +107,6 @@ footer {
 
 </head>
 <body>
-
-<!--
-
-https://youtu.be/AZsUROTwuDo?list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR
-
--->
-
 
 <div class="wrapper">
 	<header>
@@ -193,8 +155,6 @@ https://youtu.be/AZsUROTwuDo?list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR
 
 <!-- 
 
-https://www.glassdoor.com/Interview/Thrive-Market-Front-End-Developer-Interview-Questions-EI_IE1036608.0,13_KO14,33.htm
-
 <div class="XXXXX">XXXXX</div>
 <div class="XXXXX">XXXXX</div> 
 
@@ -207,5 +167,8 @@ https://www.glassdoor.com/Interview/Thrive-Market-Front-End-Developer-Interview-
 <script>
 	simpleslider.getSlider();
 </script>
+
+
+https://youtu.be/AZsUROTwuDo?list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR
 
 -->

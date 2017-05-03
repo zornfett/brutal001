@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>rachelandrew - 2zxWEeBkjk0</title>
+
+<style type="text/css">
+	
+* { 
+	font-family: Arial;
+	box-sizing: border-box;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 
+	minmax: items never go smaller than 150px 
+	auto-fill: maintain the minmax minimum?
+	auto-fit: uses the minmax maximum?
+
+	.. repeat(3, 1fr); 
+	*/
+	grid-gap: 1em;
+
+}
+
+.grid div {
+	color: #fff;
+	text-align: center;
+	padding: .5em;
+	border-radius: .3em;
+}
+
+.grid div:nth-child(odd) { background-color: orange; }
+.grid div:nth-child(even) { background-color: blue; }
+
+
+.grid div:nth-child(1) { 
+	border: 2px dotted red;
+}
+
+/*.spantwo {
+	grid-column-end: span 2;
+	grid-row-end: span 2;
+}*/
+
+
+</style>
+
+</head>
+<body>
+
+<div class="grid">
+	<div>1</div>
+	<div class="spantwo">2</div>
+	<div>3</div>
+	<div class="spantwo">4</div>
+	<div>5</div>
+	<div>6</div>
+	<div>7</div>
+	<div>8</div>
+</div>
+
+<!--  Scripts-->
+<!-- <script src="js/jquery.js"></script> -->
+
+</body>
+</html>
+
+<!-- 
+
+https://youtu.be/AZsUROTwuDo?list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR
+
+-->
