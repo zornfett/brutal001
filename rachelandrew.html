@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>rachelandrew - 2zxWEeBkjk0</title>
+	<title>rachelandrew - 9ut2RaoBK7w</title>
 
 <style type="text/css">
 	
@@ -19,9 +19,11 @@
 	auto-fill: maintain the minmax minimum?
 	auto-fit: uses the minmax maximum?
 
-	.. repeat(3, 1fr); 
-	*/
+	.. repeat(3, 1fr); */
 	grid-gap: 1em;
+	grid-auto-flow: dense; /*
+	grid backfills empty spaces when dense
+	*/
 
 }
 
@@ -40,11 +42,25 @@
 	border: 2px dotted red;
 }
 
-/*.spantwo {
+.spantwo {
 	grid-column-end: span 2;
 	grid-row-end: span 2;
-}*/
+}
 
+.spanthree {
+	grid-column-end: span 3;
+	grid-row-end: span 3;
+}
+
+.spanfour {
+	grid-row-end: span 4;
+}
+
+.madorder {
+	background-color: green !important;
+	grid-row: 2;
+	grid-column: 1 / -1; /* this goes 100% */
+}
 
 </style>
 
@@ -55,11 +71,15 @@
 	<div>1</div>
 	<div class="spantwo">2</div>
 	<div>3</div>
-	<div class="spantwo">4</div>
+	<div class="spanfour">4 / spanfour</div>
 	<div>5</div>
-	<div>6</div>
-	<div>7</div>
-	<div>8</div>
+	<div class="spanthree">6</div>
+	<div class="spanthree">7</div>
+	<div class="madorder">8</div>
+	<div>9</div>
+	<div class="spantwo">10</div>
+	<div>11</div>
+	<div>12</div>
 </div>
 
 <!--  Scripts-->
