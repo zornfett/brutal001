@@ -1,174 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>zorndotcommie, v.675</title>
-	<link rel="shortcut icon" href="royce-crop.png" type="image/x-icon" />
+	<head>
+	<meta charset="utf-8">
+	<title>adapted from rachelandrews2 / highperf#1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-	<!-- CSS  -->
-	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<!-- <link href="ZZZZZZ.css" rel="stylesheet"> -->
 
-<style type="text/css">
+	<style type="text/css">
+		
+	* { 
+		font-family: Arial;
+		box-sizing: border-box;
+	}
 
-* {
-	font-family: 'VT323', monospace;
-	box-sizing: border-box;
-}
+	.grid {
+		display: grid;
+		grid-template-columns: 2fr 4fr;
+		grid-gap: 1em;
 
-body { /* animation: pulse 20s infinite; */ }
+	}
 
-.wrapper {
-	/*width: 865px;*/
-	display: grid;
+	.grid * {
+		color: #fff;
+	/*	text-align: center;*/
+		padding: .5em;
+		border-radius: .3em;
+	}
 
-	grid-template-columns: 254px/611px; /*611px*/
-	grid-template-rows: 31px/20px/78px/752px/15px;
-	/* 120px/752px/15px; */
-	grid-auto-flow: row;
+	header {
+		grid-column: 1/3;
 
-	margin: 0 auto;
-}
+		background-color: blue;
+	}
 
+	aside {
+		grid-column: 1;
+		grid-row: 2;
 
-header {
-	grid-area: header;
-/*	grid-column: 1/3;
-	grid-row: 1/4;*/
+		background-color: blue;
+	}
 
-	background-color: red;
-}
-.logo {
-/*	grid-column: 1/2;
-	grid-row: 1/4;*/
+	article {
+		grid-column: 2;
+		grid-row: 2;
+		
+		background-color: orange;
+	}
 
-	background-color: yellow;
-}
-nav {
-	grid-area: nav;
-/*	grid-column: 2/3;
-	grid-row: 1/4;*/
+	article img {
+		width: 20%;
+		height: auto;
 
-	background-color: blue;
-}
-.contact {
-/*	grid-column: 2/3;
-	grid-row: 1/1;*/
+		float: right;
+	}
 
-}
-.main-nav {
-/*	grid-column: 2/3;
-	grid-row: 2/2;*/
+	footer {
+		grid-column: 1/3;
+		grid-row: 3;
 
-}
-.sub-nav {
-/*	grid-column: 2/3;
-	grid-row: 3/3;*/
+		background-color: blue;
+	}
 
-}
+	</style>
 
-#content {
-/*	grid-column: 4/5;
-	grid-row: 2/3;	*/
+	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	</head>
+	<body>
 
-	background-color: green;
-	color: yellow;
-}
-aside {
-	grid-area: aside;
-/*	grid-column: 1/2;
-	grid-row: 2/3;*/
+	<div class="grid">
+		<header>Header</header>
+		<article>
+			<img src="http://aerindustries.com/direct-sales-content/pb-25/BA_PB-25_9_BL.jpg">
+			<h1>Article</h1>
+			<p><!-- Content for my excellent article would go here. -->
+			XXXX VP-25, 3 colors<br />
+			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_Ra2dqalFOTGZHTUk<br />
+			(19 images - OK)</p>
+			<p>XXXX VP-33, 3 colors<br />
+			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_RMTcxWjhkMmQ4ak0<br />
+			(27 images - OK)</p>
+<!-- 			<p>XXXX VP-50, 1 color/grey<br />
+			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_RN2NEbjd1RUMwekU<br />
+			(5 images - OK)</p>	 -->
+		</article>
+		<aside>Aside</aside>
+		<footer>Footer</footer>
+	</div>
 
-	background-color: orange;
-	color: blue;
-}
+	<!-- <br /><img src="http://aerindustries.com/direct-sales-content/pb-25/BA_PB-25_9_BL.jpg"> -->
 
-.gallery {
-/*	grid-column: 2/3;
-	grid-row: 4/5;*/
-}
-
-.tabs {
-/*	grid-column: 2/3;
-	grid-row: 4/5;*/
-}
-
-footer {
-	grid-area: footer;
-/*	grid-column: 1/3;
-	grid-row: 5/6;*/
-
-	background-color: purple;
-	color: yellow;
-}
+<!-- 	<script src="ZZZZZZ.js"></script> -->
+	<script>
+		
 
 
-</style>
+		// highperf, page 7
+		/*
+		var script = document.createElement("script");
+		script.type = "text/javascript";
 
-</head>
-<body>
-
-<div class="wrapper">
-	<header>
-		<div class="logo">
-			<!-- <img src="http://www.aerindustries.com/ebay-supplement/img1/logo-main.png" alt="AER Industries" /> -->
-			logo
-		</div>
-		<nav>
-			<div class="contact">
-				contact
-			</div>
-			<div class="main-nav">
-				main-nav
-			</div>
-			<div class="sub-nav">
-				sub-nav
-			</div>
-		</nav>
-	</header>
-
-	<aside>
-		ASIDE
-	</aside>
-	<section id="content">		
-		<section class="gallery">
-			gallery
-		</section>	
-		<section class="tabs">
-			tabs
-		</section>
-	</section>
-	<footer>
-		FOOTER
-	</footer>
-</div>
-
-<!--  Scripts-->
-<script src="js/jquery.js"></script>
-<!-- 
-<script src="js/brutalist.js"></script>
-<script src="js/start.brutalizing.js"></script>
-<script src="js/custom.js"></script>
- -->
-</body>
+		script.onload = function(){
+			alert("script loaded!");
+		};
+		script.src = "https://aerindustries.com/wp-includes/js/jquery/jquery.js";
+		document.getElementsByTagName("head")[0].appendChild(script); 
+		*/
+	</script>
+	</body>
 </html>
-
-<!-- 
-
-<div class="XXXXX">XXXXX</div>
-<div class="XXXXX">XXXXX</div> 
-
-<div style="width: 100%; padding-bottom: 25%" data-simple-slider>
-	<img src="https://unsplash.it/640/160?random=1"/>
-	<img src="https://unsplash.it/640/160?random=2"/>
-	<img src="https://unsplash.it/640/160?random=3"/>
-</div>
-<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
-<script>
-	simpleslider.getSlider();
-</script>
-
-
-https://youtu.be/AZsUROTwuDo?list=PLQkVA6z3dFvbnBJetfYDAF3-cG_ubgdZR
-
--->
