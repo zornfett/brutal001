@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 	<meta charset="utf-8">
-	<title>adapted from rachelandrews2 / highperf#1</title>
+	<title>highperf 8</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -14,7 +14,7 @@
 	<style type="text/css">
 		
 	* { 
-		font-family: Arial;
+		/*font-family: Arial;*/
 		box-sizing: border-box;
 	}
 
@@ -96,14 +96,20 @@
 
 <!-- 	<script src="ZZZZZZ.js"></script> -->
 	<script>
-		
-		$('a').on('click', function(){
-			e.preventDefault();
-			console.log('this is a dummy clickAction')
-			$('aside').addClass('buttonhole');
-		});
+		// highperf 8 - IE bullshits
+		var script = document.createElement("script")
+		script.type = "text/javascript";
 
-		// highperf, page 7
+		script.onreadystatechange = function(){
+			if (script.readyState == "loaded" || script.readyState == complete){
+				script.onreadystatechange = null;
+				alert("Script loaded!")
+			}
+		};
+		script.src = "file1.js";
+		document.getElementsByTagName("head")[0].appendChild(script);
+
+		// highperf 7
 		/*
 		var script = document.createElement("script");
 		script.type = "text/javascript";
