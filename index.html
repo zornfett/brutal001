@@ -8,7 +8,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- <link href="ZZZZZZ.css" rel="stylesheet"> -->
+	<!-- per Gareballs -->
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
 
 	<style type="text/css">
 		
@@ -96,7 +97,11 @@
 <!-- 	<script src="ZZZZZZ.js"></script> -->
 	<script>
 		
-
+		$('a').on('click', function(){
+			e.preventDefault();
+			console.log('this is a dummy clickAction')
+			$('aside').addClass('buttonhole');
+		});
 
 		// highperf, page 7
 		/*
