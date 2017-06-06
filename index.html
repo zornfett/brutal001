@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 	<meta charset="utf-8">
-	<title>highperf 8</title>
+	<title>highperf 9</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -77,26 +77,39 @@
 		<article>
 			<img src="http://aerindustries.com/direct-sales-content/pb-25/BA_PB-25_9_BL.jpg">
 			<h1>Article</h1>
-			<p><!-- Content for my excellent article would go here. -->
+			<p>
 			XXXX VP-25, 3 colors<br />
 			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_Ra2dqalFOTGZHTUk<br />
 			(19 images - OK)</p>
 			<p>XXXX VP-33, 3 colors<br />
 			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_RMTcxWjhkMmQ4ak0<br />
 			(27 images - OK)</p>
-<!-- 			<p>XXXX VP-50, 1 color/grey<br />
-			https://drive.google.com/drive/folders/<br />0B6dgWrDdID_RN2NEbjd1RUMwekU<br />
-			(5 images - OK)</p>	 -->
 		</article>
 		<aside>Aside</aside>
 		<footer>Footer</footer>
 	</div>
 
-	<!-- <br /><img src="http://aerindustries.com/direct-sales-content/pb-25/BA_PB-25_9_BL.jpg"> -->
-
-<!-- 	<script src="ZZZZZZ.js"></script> -->
 	<script>
-		// highperf 8 - IE bullshits
+		// highperf 9
+		var script = document.createElement("script")
+		script.type = "text/javascript";
+		if (script.readyState){
+			script.onreadystatechange = function(){
+				if (script.readyState == "loaded" || script.readyState == "complete"){
+					script.onreadystatechange = null;
+					callback();	
+				};
+			} else {
+				script.onload = function(){
+					callback();
+				};
+			}
+			script.src = url;
+			document.getElementsByTagName("head")[0].appendChild(script);
+		}
+		// take an aditionallly copy from
+
+		/* highperf 8 - IE bullshits
 		var script = document.createElement("script")
 		script.type = "text/javascript";
 
@@ -107,19 +120,8 @@
 			}
 		};
 		script.src = "file1.js";
-		document.getElementsByTagName("head")[0].appendChild(script);
+		document.getElementsByTagName("head")[0].appendChild(script);*/
 
-		// highperf 7
-		/*
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-
-		script.onload = function(){
-			alert("script loaded!");
-		};
-		script.src = "https://aerindustries.com/wp-includes/js/jquery/jquery.js";
-		document.getElementsByTagName("head")[0].appendChild(script); 
-		*/
 	</script>
 	</body>
 </html>
